@@ -32,16 +32,18 @@ function addNews() {
     //console.log(data);
 
     const response = data.response.docs; //arreglo de objetos de la propiedad docs del objeto response de la data
-    //console.log(response);
+    console.log(response);
     const arraySplice = response.splice(0, 5); // array con los objetos seleccionados de acuerdo a los indices cortados que se indican con el metodo splice
     //console.log(arraySplice);
 
     response.forEach((element, index, array) => {
 
         const snippet = element.snippet; //accediendo a la propiedad snippet del arreglo
-        //console.log(snippet);
+        console.log(snippet);
         const multimedia1 = element.multimedia; //accediendo a los objetos multimedia del arreglo
-        //console.log(multimedia1);
+        console.log(multimedia1);
+        const image = element.web_url;
+        console.log(image);
 
         let li = document.createElement("li");
         li.className = "articleClass";
